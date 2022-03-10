@@ -5,10 +5,9 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  passwordText.value = password;
-}
+  passwordText.value = password;}
 
-sign = window.prompt('How many characters would you likeyour password contain?');
+ sign = window.prompt("How many characters would  you likey our password contain?");
 
 if(window.confirm("Click OK to confirm including Special characters.")) { }
 
@@ -18,10 +17,45 @@ if(window.confirm("Click OK to confirm including UPPERcase characters.")) { }
 
 if(window.confirm("Click OK to confirm including LOWERcase characters.")) { }
 
-
-// generate passcode
-if (window.confirm("Do you really want to leave?")) {
-  window.open("exit.html", "Thanks for Visiting!");
+const randomFunc = {
+  lower: getRandomLower,
+  upper: getRandomUpper,
+  number: getRandomNumber,
+  symbol: getRandomSymbol,
 }
 
-generateBtn.addEventListener("click", writePassword);
+// https://net-comber.com/charset.html
+
+  function getRandomLower() {
+  return String.fromCharCode((Math.floor(Math.random()* 26)+ 97));
+}
+
+console.log(getRandomLower());
+
+function getRandomUpper() {
+  return String.fromCharCode((Math.floor(Math.random()* 26) + 65)) ;
+}
+console.log(getRandomUpper());
+
+function getRandomNumber() {
+  return String.fromCharCode(Number(Math.floor(Math.random()* 10) + 48)) ;
+}
+console.log(getRandomNumber());
+
+
+function getRandomSymbol() {
+  const symbols = '!@#$%^&*(){}=<>/,.'
+  return symbols [Math.floor(Math.random()*symbols.length)];
+}
+  console.log(getRandomSymbol());
+
+
+
+
+
+
+// Set up a function ( with IF & ELSE statment ) OR Arrays first? 
+
+// How generate randown arrays for characters  ?
+
+// generate passcode.//
