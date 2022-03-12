@@ -53,6 +53,7 @@ function generatePassword() {
     }
   }
   console.log(password);
+  return password;
 }
 
 // ARRAYS for ech password criteria.
