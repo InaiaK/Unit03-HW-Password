@@ -8,10 +8,14 @@ function writePassword() {
 
   passwordText.value = password;
 }
-// PROMPTS + CONSOLE.LOG for user answers.
-var userLenghtCharacters = prompt("How many characters would  you like your password contain?", "Minimun 8 characters and Maximun characters 128");
-console.log(userLenghtCharacters);
 
+function generatePassword(){
+// PROMPTS + CONSOLE.LOG for user answers.
+var userLenghtCharacters = parseInt(prompt("How many characters would  you like your password contain?", "Minimun 8 characters and Maximun characters 128"));
+console.log(userLenghtCharacters);
+if(userLenghtCharacters < 8|| userLenghtCharacters > 128){
+return" Please enter the min and max characters required"
+}
 var userSpecialCharacters = confirm("Click OK to confirm including Special characters.");
 console.log(userSpecialCharacters);
 
@@ -24,34 +28,42 @@ console.log(userUppercase);
 var userLowercase = confirm("Click OK to confirm including LOWERcase characters.");
 console.log(userLowercase);
 
+}
+
 // ARRAYS for ech password criteria.
-var randomFunc = ['getRandomLower','getRandomUpper','getRandomNumber','getRandomSpecial'];
+var randomFunc = ['getRandomLower', 'getRandomUpper', 'getRandomNumber', 'getRandomSpecial'];
+
+// DEFINED ARRAYS (  https://net-comber.com/charset.html )
 
 
-function getLenghtCharacters () {
-  return String.fromCharCode((Math.floor(Math.random()* 8)+ 120));}
+function getLenghtCharacters() { // confirm this function 
+  return String.fromCharCode((Math.floor(Math.random() * 8) + 120));
+}
 console.log(getLenghtCharacters());
 
+
 function getRandomLower() {
-  return String.fromCharCode((Math.floor(Math.random()* 26)+ 97));}
+  return String.fromCharCode((Math.floor(Math.random() * 26) + 97));
+}
 console.log(getRandomLower());
 
 function getRandomUpper() {
-  return String.fromCharCode((Math.floor(Math.random()* 26) + 65)) ;
+  return String.fromCharCode((Math.floor(Math.random() * 26) + 65));
 }
 console.log(getRandomUpper());
 
 function getRandomNumber() {
-  return String.fromCharCode(Number(Math.floor(Math.random()* 10) + 48)) ;
+  return String.fromCharCode(Number(Math.floor(Math.random() * 10) + 48));
 }
 console.log(getRandomNumber());
 
 function getRandomSpecial() {
-const symbols = '!@#$%^&*(){}=<>/,.';
-return symbols [Math.floor(Math.random()*symbols.length)];
+  const symbols = '!@#$%^&*(){}=<>/,.';
+  return symbols[Math.floor(Math.random() * symbols.length)];
 }
-  console.log(getRandomSpecial());
+console.log(getRandomSpecial());
 
+generateBtn.addEventListener("click",writePassword)
 
 
 
