@@ -5,53 +5,35 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+
   passwordText.value = password;
 }
-for(var i =0; i <=passwordText; i++){
-  password = passwordText.value + lengthCha + randomFunc + value.charAt(Math.floor(Math.random()*Math.floor(value.length-1)));
-}
-document.getElementById('#generate').passwordText.value = password;
+// PROMPTS + CONSOLE.LOG for user answers.
+var userLenghtCharacters = prompt("How many characters would  you like your password contain?", "Minimun 8 characters and Maximun characters 128");
+console.log(userLenghtCharacters);
+
+var userSpecialCharacters = confirm("Click OK to confirm including Special characters.");
+console.log(userSpecialCharacters);
+
+var userNumericCharacters = confirm("Click OK to confirm including Numeric characters.");
+console.log(userNumericCharacters);
+
+var userUppercase = confirm("Click OK to confirm including UPPERcase characters.");
+console.log(userUppercase);
+
+var userLowercase = confirm("Click OK to confirm including LOWERcase characters.");
+console.log(userLowercase);
+
+// ARRAYS for ech password criteria.
+var randomFunc = ['getRandomLower','getRandomUpper','getRandomNumber','getRandomSpecial'];
 
 
-// The best to be as length ? 
-document.getElementById("#generate").innerHTML = "Min 08 ; Max 128 ";
+function getLenghtCharacters () {
+  return String.fromCharCode((Math.floor(Math.random()* 8)+ 120));}
+console.log(getLenghtCharacters());
 
-  let lengthCha = prompt('How many characters would  you likey our password contain?');
-  for (let i = 0; i < passLength; i+=secInt) {
-  let length = Number(8 < 128);}
-
-
- 
-if(window.confirm("Click OK to confirm including Special characters.")) {}
-
-if(window.confirm("Click OK to confirm including Numeric characters.")) { }
-
-if(window.confirm("Click OK to confirm including UPPERcase characters.")) { }
-
-if(window.confirm("Click OK to confirm including LOWERcase characters.")) { }
-
-
-
-var randomFunc = 'lower: getRandomLower'; 'upper: getRandomUpper'; 'number: getRandomNumber'; 'symbol: getRandomSymbol';
-
-// https://net-comber.com/charset.html
-
-
-function passwordLength(){
-  var password = document.getElementById("password");
-  if(textbox.value.length <= 8 && textbox.value.length >= 128){
-      alert("success");
-  }
-  else{
-      alert("make sure the input is between 8-128 characters long")
-  }
-
-
-
- function getRandomLower() {
-  return String.fromCharCode((Math.floor(Math.random()* 26)+ 97));
-}
-
+function getRandomLower() {
+  return String.fromCharCode((Math.floor(Math.random()* 26)+ 97));}
 console.log(getRandomLower());
 
 function getRandomUpper() {
@@ -64,11 +46,12 @@ function getRandomNumber() {
 }
 console.log(getRandomNumber());
 
-
-function getRandomSymbol() {
-const symbols = '!@#$%^&*(){}=<>/,.'
+function getRandomSpecial() {
+const symbols = '!@#$%^&*(){}=<>/,.';
 return symbols [Math.floor(Math.random()*symbols.length)];
 }
-  console.log(getRandomSymbol());
+  console.log(getRandomSpecial());
+
+
 
 
