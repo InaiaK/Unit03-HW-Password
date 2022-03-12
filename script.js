@@ -9,25 +9,50 @@ function writePassword() {
   passwordText.value = password;
 }
 
-function generatePassword(){
-// PROMPTS + CONSOLE.LOG for user answers.
-var userLenghtCharacters = parseInt(prompt("How many characters would  you like your password contain?", "Minimun 8 characters and Maximun characters 128"));
-console.log(userLenghtCharacters);
-if(userLenghtCharacters < 8|| userLenghtCharacters > 128){
-return" Please enter the min and max characters required"
-}
-var userSpecialCharacters = confirm("Click OK to confirm including Special characters.");
-console.log(userSpecialCharacters);
+function generatePassword() {
+  // PROMPTS + CONSOLE.LOG for user answers.
+  var userLenghtCharacters = parseInt(prompt("How many characters would  you like your password contain?", "Minimun 8 characters and Maximun characters 128"));
+  console.log(userLenghtCharacters);
+  if (userLenghtCharacters < 8 || userLenghtCharacters > 128) {
+    return " Please enter the min and max characters required"
+  }
+  var userSpecialCharacters = confirm("Click OK to confirm including Special characters.");
+  console.log(userSpecialCharacters);
 
-var userNumericCharacters = confirm("Click OK to confirm including Numeric characters.");
-console.log(userNumericCharacters);
+  var userNumericCharacters = confirm("Click OK to confirm including Numeric characters.");
+  console.log(userNumericCharacters);
 
-var userUppercase = confirm("Click OK to confirm including UPPERcase characters.");
-console.log(userUppercase);
+  var userUppercase = confirm("Click OK to confirm including UPPERcase characters.");
+  console.log(userUppercase);
 
-var userLowercase = confirm("Click OK to confirm including LOWERcase characters.");
-console.log(userLowercase);
+  var userLowercase = confirm("Click OK to confirm including LOWERcase characters.");
+  console.log(userLowercase);
 
+  if (!userLowercase && !userUppercase && !userNumericCharacters && !userSpecialCharacters) {
+    return " Please select at least one option."
+  }
+  var password = ""
+  var i = 0;
+  while (i < userLenghtCharacters - 1) {
+    if (userLowercase && i < userLenghtCharacters - 1) {
+      password += getRandomLower()
+      i++
+    }
+    if (userUppercase && i < userLenghtCharacters - 1) {
+      password += getRandomUpper()
+      i++
+    }
+    if (userSpecialCharacters && i < userLenghtCharacters - 1) {
+      password += getRandomSpecial()
+      i++
+    }
+    if (userNumericCharacters && i < userLenghtCharacters - 1) {
+      password += getRandomNumber()
+      i++
+
+    }
+  }
+  console.log(password);
 }
 
 // ARRAYS for ech password criteria.
@@ -63,7 +88,7 @@ function getRandomSpecial() {
 }
 console.log(getRandomSpecial());
 
-generateBtn.addEventListener("click",writePassword)
+generateBtn.addEventListener("click", writePassword)
 
 
 
