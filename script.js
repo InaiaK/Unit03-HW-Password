@@ -1,10 +1,11 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+const generateBtn = document.getElementById("generate");
+generateBtn.addEventListener("click", writePassword)
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  var passwordText = document.getElementById("password");
 
   passwordText.value = password;
 }
@@ -88,8 +89,3 @@ function getRandomSpecial() {
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
 console.log(getRandomSpecial());
-
-generateBtn.addEventListener("click", writePassword)
-
-
-
