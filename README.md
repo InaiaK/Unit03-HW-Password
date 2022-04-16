@@ -3,7 +3,7 @@
 - Password Generator
 
 ## Contact Me
-E-mail: inaiakenia15@gmail.com
+E-mail: inaia5martin@gmail.com
 Slack: @InaiaK
 
 
