@@ -2,10 +2,6 @@
 - Homework JavaScript
 - Password Generator
 
-# Mock-Up
-
-![PasswordDEMO](file:///C:/Users/Owner/mod3/Unit03-HW-Password/Unit03-HW-Password/index.html); 
-
 ## Contact Me
 E-mail: inaiakenia15@gmail.com
 Slack: @InaiaK
