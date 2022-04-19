@@ -1,11 +1,8 @@
-# Unit03-HW-Password
-- Homework JavaScript
-- Password Generator
-
-## Contact Me
-E-mail: inaia5martin@gmail.com
-Slack: @InaiaK
-
+Password-generator
+technologies used
+-HTML
+-CSS
+-JAVASCRIPT
 
 ## User Story
 ```
@@ -13,6 +10,12 @@ AS AN employee with access to sensitive data
 I WANT to randomly generate a password that meets certain criteria
 SO THAT I can create a strong password that provides greater security
 ```
+## Contact Me
+E-mail: inaia5martin@gmail.com
+Slack: @InaiaK
+
+
+
 ## Acceptance Criteria
 ```
 GIVEN I need a new, secure password
