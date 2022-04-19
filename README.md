@@ -1,5 +1,5 @@
 ## Password-generator
-technologies used
+Technologies used:
 -HTML
 -CSS
 -JAVASCRIPT
