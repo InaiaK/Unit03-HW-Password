@@ -1,4 +1,4 @@
-Password-generator
+## Password-generator
 technologies used
 -HTML
 -CSS
