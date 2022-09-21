@@ -5,7 +5,7 @@
 The main objective is the modify the starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
 
 ## Image 
-
+<img src="https://github.com/InaiaK/Password-generator/blob/main/pass.gif">
 
 ## Deploy link 
  https://inaiak.github.io/Password-generator/
